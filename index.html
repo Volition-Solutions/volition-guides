@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volition Guides</title>
+  <link rel="icon" type="image/png" href="org-staff/assets/favicon.png">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Outfit", sans-serif;
+      background: var(--sand-100);
+      color: var(--text-dark);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: var(--space-6) var(--space-6) var(--space-5);
+      border-bottom: 1px solid var(--divider-default);
+    }
+
+    header img {
+      height: 32px;
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+    }
+
+    .hero h1 {
+      font-size: var(--fs-xxl);
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--lh-xxl);
+      color: var(--text-dark);
+      margin-bottom: var(--space-3);
+    }
+
+    .hero p {
+      font-size: var(--fs-body-lg);
+      line-height: var(--lh-body-lg);
+      color: var(--text-dark);
+    }
+
+    .guide-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .guide-card {
+      display: block;
+      background: var(--panel-highlight);
+      border-radius: var(--radius-md);
+      padding: var(--space-5);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s ease;
+    }
+
+    .guide-card:hover {
+      box-shadow: 0 2px 12px rgba(0,35,43,0.10);
+    }
+
+    .guide-card--soon {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    .guide-card--soon:hover {
+      box-shadow: none;
+    }
+
+    .guide-card__label {
+      font-size: var(--fs-small);
+      font-weight: var(--font-weight-semibold);
+      color: var(--text-mid);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .guide-card__label--soon {
+      color: var(--text-light);
+    }
+
+    .guide-card__title {
+      font-size: var(--fs-body-lg);
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--lh-body-lg);
+      color: var(--text-dark);
+      margin-bottom: var(--space-1);
+    }
+
+    .guide-card__desc {
+      font-size: var(--fs-base);
+      line-height: var(--lh-base);
+      color: var(--text-dark);
+    }
+
+    footer {
+      padding: var(--space-6);
+      text-align: center;
+      font-size: var(--fs-small);
+      color: var(--text-mid);
+      border-top: 1px solid var(--divider-default);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logos/logo-wordmark-v3.svg" alt="Volition">
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Volition Guides</h1>
+      <p>Resources and guides to help everyone get the most out of Volition.</p>
+    </div>
+
+    <div class="guide-list">
+
+      <a class="guide-card" href="org-staff/">
+        <p class="guide-card__label">For organisations</p>
+        <p class="guide-card__title">Org support staff guide</p>
+        <p class="guide-card__desc">For support workers and carers who use Volition to access the preferences of the people they support.</p>
+      </a>
+
+      <a class="guide-card guide-card--soon" href="coming-soon/" tabindex="-1" aria-disabled="true">
+        <p class="guide-card__label guide-card__label--soon">Coming soon</p>
+        <p class="guide-card__title">Decision Maker guide</p>
+        <p class="guide-card__desc">For the people Volition belongs to — setting up and managing your own preferences.</p>
+      </a>
+
+      <a class="guide-card guide-card--soon" href="coming-soon/" tabindex="-1" aria-disabled="true">
+        <p class="guide-card__label guide-card__label--soon">Coming soon</p>
+        <p class="guide-card__title">Account Owner guide</p>
+        <p class="guide-card__desc">For organisation administrators managing team access, roles, and settings.</p>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; Volition Solutions Limited
+  </footer>
+
+</body>
+</html>
