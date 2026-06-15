@@ -2216,7 +2216,7 @@
 
     selectorDropdown.querySelectorAll('a').forEach(opt => {
       opt.addEventListener('click', e => {
-        e.preventDefault();
+        if (opt.getAttribute('href') === '#') e.preventDefault();
         closeDropdown();
         selectorBtn.focus();
       });
